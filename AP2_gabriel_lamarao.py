@@ -37,6 +37,8 @@ def calculaSaida(lista_convertida):
                             else:
                                 print("{}".format(valoresEntradas[coluna]), end='')
                             if(coluna==qtdEntradas-1):
+                                if(coluna==qtdEntradas):
+                                    continue
                                 print(' +', end=' ')
         print(' ')
 
@@ -56,18 +58,6 @@ def leArquivo(caminhoDoArquivo):
             entrada_atual.append(numero_atual)
         lista_convertida.append(entrada_atual)
     return lista_convertida
-
-    '''linha = linha.replace('\n', '')
-    linha = linha.split(' ')
-    linha = [int(g) for g in linha]
-    print(linha)
-    tamanhoDaSaida = len(linha)
-    qtdEntradas = calculaEntradas(tamanhoDaSaida)
-    tabelaVerdade = []
-    insereEntradas(tabelaVerdade, qtdEntradas, tamanhoDaSaida)
-    print(tabelaVerdade)
-    calculaSaida(linha, tamanhoDaSaida, qtdEntradas, tabelaVerdade)'''
-
 
 caminhoDoArquivo = '/home/gabriel/PycharmProjects/Eletronica/binarios.txt'
 lista = leArquivo(caminhoDoArquivo)
